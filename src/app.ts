@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import postRoutes from "./routes/postRoutes";
 import todosRoutes from "./routes/todosRoutes";
 import productRoutes from "./routes/productRoutes";
+import studentRoutes from "./routes/studentRoutes";
+
 import cors from "cors";
 
 
@@ -23,6 +25,7 @@ app.use(function(req, res, next) {
 app.use('/posts', postRoutes);
 app.use('/todos',todosRoutes);
 app.use('/products',productRoutes);
+app.use('/students',studentRoutes)
 
 
 app.get("/", (req: Request, res: Response) => {
